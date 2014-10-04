@@ -1,0 +1,407 @@
+[{
+ "id": 111,
+ "codigo": 939,
+ "nombre": "Física I",
+ "cuatrimestre": 1,
+ "anio": 1,
+ "horas": 90
+}, {
+ "id": 112,
+ "codigo": 861,
+ "nombre": "Análisis Matemático I",
+ "cuatrimestre": 1,
+ "anio": 1,
+ "horas": 90
+}, {
+ "id": 113,
+ "codigo": 742,
+ "nombre": "Matemática Discreta I",
+ "cuatrimestre": 1,
+ "anio": 1,
+ "horas": 60
+}, {
+ "id": 114,
+ "codigo": 743,
+ "nombre": "Estructuras de Datos I",
+ "cuatrimestre": 1,
+ "anio": 1,
+ "horas": 60
+}, {
+ "id": 115,
+ "codigo": 862,
+ "nombre": "Algebra I",
+ "cuatrimestre": 1,
+ "anio": 1,
+ "horas": 60
+}, {
+ "id": 116,
+ "codigo": 591,
+ "nombre": "Problemas de Historia del Siglo XX",
+ "cuatrimestre": 1,
+ "anio": 1,
+ "horas": 60
+}, {
+ "id": 117,
+ "codigo": 592,
+ "nombre": "Taller de Introducción a la Problemática del Mundo Contemporáneo",
+ "cuatrimestre": 1,
+ "anio": 1,
+ "horas": 30
+}, {
+ "id": 121,
+ "codigo": 942,
+ "nombre": "Física II",
+ "cuatrimestre": 2,
+ "anio": 1,
+ "horas": 90
+}, {
+ "id": 122,
+ "codigo": 941,
+ "nombre": "Análisis Matemático II",
+ "cuatrimestre": 2,
+ "anio": 1,
+ "horas": 90
+}, {
+ "id": 123,
+ "codigo": 744,
+ "nombre": "Matemática Discreta II",
+ "cuatrimestre": 2,
+ "anio": 1,
+ "horas": 60
+}, {
+ "id": 124,
+ "codigo": 745,
+ "nombre": "Lenguaje de Programación I",
+ "cuatrimestre": 2,
+ "anio": 1,
+ "horas": 60
+}, {
+ "id": 125,
+ "codigo": 952,
+ "nombre": "Algebra II",
+ "cuatrimestre": 2,
+ "anio": 1,
+ "horas": 60
+}, {
+ "id": 126,
+ "codigo": 2,
+ "nombre": "Cultura Contemporánea",
+ "cuatrimestre": 2,
+ "anio": 1,
+ "horas": 60
+}, {
+ "id": 127,
+ "codigo": 592,
+ "nombre": "Taller de Introducción a la Problemática del Mundo Contemporáneo",
+ "cuatrimestre": 2,
+ "anio": 1,
+ "horas": 30
+}, {
+ "id": 211,
+ "codigo": 746,
+ "nombre": "Probabilidad y Estadística I",
+ "cuatrimestre": 1,
+ "anio": 2,
+ "horas": 60
+}, {
+ "id": 212,
+ "codigo": 943,
+ "nombre": "Análisis Matemático III",
+ "cuatrimestre": 1,
+ "anio": 2,
+ "horas": 90
+}, {
+ "id": 213,
+ "codigo": 747,
+ "nombre": "Estructuras de Datos II",
+ "cuatrimestre": 1,
+ "anio": 2,
+ "horas": 60
+}, {
+ "id": 214,
+ "codigo": 748,
+ "nombre": "Teoría de Sistemas",
+ "cuatrimestre": 1,
+ "anio": 2,
+ "horas": 60
+}, {
+ "id": 215,
+ "codigo": 749,
+ "nombre": "Lenguaje de Programación II",
+ "cuatrimestre": 1,
+ "anio": 2,
+ "horas": 60
+}, {
+ "id": 216,
+ "codigo": 3,
+ "nombre": "Cuestiones de Sociología, Economía y Política",
+ "cuatrimestre": 1,
+ "anio": 2,
+ "horas": 60
+}, {
+ "id": 221,
+ "codigo": 750,
+ "nombre": "Física III",
+ "cuatrimestre": 2,
+ "anio": 2,
+ "horas": 90
+}, {
+ "id": 222,
+ "codigo": 751,
+ "nombre": "Probabilidad y Estadística II",
+ "cuatrimestre": 2,
+ "anio": 2,
+ "horas": 60
+}, {
+ "id": 223,
+ "codigo": 752,
+ "nombre": "Arquitectura de Computadoras",
+ "cuatrimestre": 2,
+ "anio": 2,
+ "horas": 60
+}, {
+ "id": 224,
+ "codigo": 753,
+ "nombre": "Estructuras de Datos III",
+ "cuatrimestre": 2,
+ "anio": 2,
+ "horas": 60
+}, {
+ "id": 225,
+ "codigo": 754,
+ "nombre": "Análisis y Diseño Estructurado",
+ "cuatrimestre": 2,
+ "anio": 2,
+ "horas": 60
+}, {
+ "id": 226,
+ "codigo": 104,
+ "nombre": "Investigación Operativa",
+ "cuatrimestre": 2,
+ "anio": 2,
+ "horas": 60
+}, {
+ "id": 311,
+ "codigo": 755,
+ "nombre": "Química",
+ "cuatrimestre": 1,
+ "anio": 3,
+ "horas": 90
+}, {
+ "id": 312,
+ "codigo": 756,
+ "nombre": "Bases de Datos I",
+ "cuatrimestre": 1,
+ "anio": 3,
+ "horas": 90
+}, {
+ "id": 313,
+ "codigo": 757,
+ "nombre": "Teoría de la Información",
+ "cuatrimestre": 1,
+ "anio": 3,
+ "horas": 60
+}, {
+ "id": 314,
+ "codigo": 758,
+ "nombre": "Lenguaje de Programación III",
+ "cuatrimestre": 1,
+ "anio": 3,
+ "horas": 60
+}, {
+ "id": 315,
+ "codigo": 1,
+ "nombre": "Metodología de la Información",
+ "cuatrimestre": 1,
+ "anio": 3,
+ "horas": 60
+}, {
+ "id": 316,
+ "codigo": 759,
+ "nombre": "Inglés Básico",
+ "cuatrimestre": 1,
+ "anio": 3,
+ "horas": 60
+}, {
+ "id": 321,
+ "codigo": 760,
+ "nombre": "Análisis y Disño Orientado a Objetos",
+ "cuatrimestre": 2,
+ "anio": 3,
+ "horas": 60
+}, {
+ "id": 322,
+ "codigo": 761,
+ "nombre": "Bases de Datos II",
+ "cuatrimestre": 2,
+ "anio": 3,
+ "horas": 90
+}, {
+ "id": 323,
+ "codigo": 762,
+ "nombre": "Sistemas Operativos",
+ "cuatrimestre": 2,
+ "anio": 3,
+ "horas": 120
+}, {
+ "id": 324,
+ "codigo": 763,
+ "nombre": "Lenguaje de Programación IV",
+ "cuatrimestre": 2,
+ "anio": 3,
+ "horas": 60
+}, {
+ "id": 325,
+ "codigo": 764,
+ "nombre": "Teleinformática",
+ "cuatrimestre": 2,
+ "anio": 3,
+ "horas": 60
+}, {
+ "id": 326,
+ "codigo": 765,
+ "nombre": "Inglés Técnico",
+ "cuatrimestre": 2,
+ "anio": 3,
+ "horas": 60
+}, {
+ "id": 411,
+ "codigo": 766,
+ "nombre": "Análisis y Diseño de Sistemas en Tiempo Real",
+ "cuatrimestre": 1,
+ "anio": 4,
+ "horas": 60
+}, {
+ "id": 412,
+ "codigo": 767,
+ "nombre": "Compiladores e Intérpretes",
+ "cuatrimestre": 1,
+ "anio": 4,
+ "horas": 60
+}, {
+ "id": 413,
+ "codigo": 768,
+ "nombre": "Procesos Estocásticos",
+ "cuatrimestre": 1,
+ "anio": 4,
+ "horas": 60
+}, {
+ "id": 414,
+ "codigo": 769,
+ "nombre": "Ingeniería en Software",
+ "cuatrimestre": 1,
+ "anio": 4,
+ "horas": 60
+}, {
+ "id": 415,
+ "codigo": 770,
+ "nombre": "Procesamiento de Señales I",
+ "cuatrimestre": 1,
+ "anio": 4,
+ "horas": 60
+}, {
+ "id": 421,
+ "codigo": 771,
+ "nombre": "Simulación de Sistemas",
+ "cuatrimestre": 2,
+ "anio": 4,
+ "horas": 60
+}, {
+ "id": 422,
+ "codigo": 772,
+ "nombre": "Seguridad Informática",
+ "cuatrimestre": 2,
+ "anio": 4,
+ "horas": 90
+}, {
+ "id": 423,
+ "codigo": 773,
+ "nombre": "Inteligencia Artificial",
+ "cuatrimestre": 2,
+ "anio": 4,
+ "horas": 60
+}, {
+ "id": 424,
+ "codigo": 774,
+ "nombre": "Procesamiento de Imágenes",
+ "cuatrimestre": 2,
+ "anio": 4,
+ "horas": 60
+}, {
+ "id": 425,
+ "codigo": 775,
+ "nombre": "Circuitos Electrónicos",
+ "cuatrimestre": 2,
+ "anio": 4,
+ "horas": 90
+}, {
+ "id": 511,
+ "codigo": 1101,
+ "nombre": "Sistemas de Adquisición de Datos",
+ "cuatrimestre": 1,
+ "anio": 5,
+ "horas": 60
+}, {
+ "id": 512,
+ "codigo": 777,
+ "nombre": "Bioinformática",
+ "cuatrimestre": 1,
+ "anio": 5,
+ "horas": 60
+}, {
+ "id": 513,
+ "codigo": 778,
+ "nombre": "Robótica",
+ "cuatrimestre": 1,
+ "anio": 5,
+ "horas": 90
+}, {
+ "id": 514,
+ "codigo": 779,
+ "nombre": "Laboratorio de Electrónica",
+ "cuatrimestre": 1,
+ "anio": 5,
+ "horas": 90
+}, {
+ "id": 515,
+ "codigo": 780,
+ "nombre": "Informática Médica",
+ "cuatrimestre": 1,
+ "anio": 5,
+ "horas": 60
+}, {
+ "id": 521,
+ "codigo": 781,
+ "nombre": "Software Legal",
+ "cuatrimestre": 2,
+ "anio": 5,
+ "horas": 60
+}, {
+ "id": 522,
+ "codigo": 782,
+ "nombre": "Procesamiento de Señales II",
+ "cuatrimestre": 2,
+ "anio": 5,
+ "horas": 60
+}, {
+ "id": 523,
+ "codigo": 783,
+ "nombre": "Auditoría de Sistemas",
+ "cuatrimestre": 2,
+ "anio": 5,
+ "horas": 60
+}, {
+ "id": 524,
+ "codigo": 784,
+ "nombre": "Informática Industrial",
+ "cuatrimestre": 2,
+ "anio": 5,
+ "horas": 60
+}, {
+ "id": 525,
+ "codigo": 785,
+ "nombre": "Trabajo de Tesis",
+ "cuatrimestre": 2,
+ "anio": 5,
+ "horas": 60
+}]
