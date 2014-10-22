@@ -3,9 +3,9 @@ var App = angular.module('Listado_Materias', []);
 
     App.controller('Controlador_GET', function($scope, $http){
         
-        var url_carreras  = 'http://localhost:8080/gcu/carreras/1/planes';
-        var url_planMaterias = 'http://localhost:8080/gcu/planes_estudio/1/plan_materias';
-        var url_materias = 'http://localhost:8080/gcu/materias';
+        var url_carreras  = 'http://gcu-api.herokuapp.com:80/carreras/1/planes';
+        var url_planMaterias = 'http://gcu-api.herokuapp.com:80/planes_estudio/1/plan_materias';
+        var url_posiblesCursantes = 'http://gcu-api.herokuapp.com:80/planes_estudio/1/plan_materias/posibles_cursantes'
         
          $http({method: 'GET', 
                url: url_carreras,
@@ -24,13 +24,13 @@ var App = angular.module('Listado_Materias', []);
            
             $scope.planMaterias = data; 
         });
-        
+                
         $http({method: 'GET', 
-               url: url_materias,
+               url: url_posiblesCursantes,
               })
         
         .success(function(data){
            
-            $scope.materias = data; 
+            $scope.posiblesCursantes = data; 
         });
     });

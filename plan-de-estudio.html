@@ -40,7 +40,7 @@
 
     <h2 align="center">Plan de Estudio</h2><hr>
     <h3 align="center" class="text-info">Ingeniería en Computación</h3>
-    
+            
         <table class="table table-striped table-hover table-bordered table-condensed fixed-table-container-inner" >
             
             <thead bgcolor="#E0F8F7">
@@ -48,35 +48,34 @@
                     <th class="span1"><strong>Año</strong></th>
                     <th class="span1"><strong>Horas</strong></th>
                     <th class="span1"><strong>Cuatrimestre</strong></th>
+                    <th class="span1"><strong>Código</strong></th>
                     <th class="span3"><strong>Materia</strong></th>
+                    <th class="span1"><strong>Posibles Cursantes</strong></th>
+                    <th class="span1"><strong>Código Correlativa</strong></th>
                     <th class="span3"><strong>Correlativa</strong></th>
                     <th class="span1"><strong>Plan</strong></th>
                 </tr>
             </thead>
-            
+ 
             <tbody>
-               
-                 <tr ng-repeat="plan in planMaterias">
-                    <td>{{plan.anio}}</td>
-                    <td>{{plan.horas}}</td>
-                    <td>{{plan.cuatrimestre}}</td>
-                    <td>{{plan.materia.nombre}}</td>
-                    <td>{{plan.correlativa.nombre}}</td>
-                    <td>{{plan.planEstudio.anio}}</td>
-                    
+<!--                 <tr ng-repeat="plan in planMaterias">-->
+                
+                <!-- Saco los datos de los PlanMateria de los DTOs -->
+                <tr ng-repeat="dto in posiblesCursantes">
+                    <td>{{dto.materia.anio}}</td>
+                    <td>{{dto.materia.horas}}</td>
+                    <td>{{dto.materia.cuatrimestre}}</td>
+                    <td>{{dto.materia.materia.codigo}}</td>
+                    <td>{{dto.materia.materia.nombre}}</td>
+                    <td>{{dto.cantidadCursantes}}</td>
+                    <td>{{dto.materia.correlativa.materia.codigo}}</td>
+                    <td>{{dto.materia.correlativa.materia.nombre}}</td>
+                    <td>{{dto.materia.planEstudio.anio}}</td>
                 </tr>
             </tbody>
         </table>
     <br>
     </div>
      <!-- TABLA DE MATERIAS -->
-    
-    
-     <!--
-            SUBIR ARCHIVO USANDO 'subir_archivo.js'
-
-            <input type="file" subir-archivo multiple/>
-    -->
-    
 </body>
 </html>

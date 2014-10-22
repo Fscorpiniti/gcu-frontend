@@ -40,20 +40,20 @@
     <h2 align="center">Carreras</h2><hr>
     
         <table class="table table-striped table-hover table-bordered table-condensed">
-                
+            
+             <thead bgcolor="#E0F8F7">
                 <tr class="info">
                     <td class="span1"><strong>Año</strong></td>
                     <td class="span4"><strong>Carrera</strong></td>
                     <td class="span2"><strong></strong></td>
                     
                 </tr>
-        
+            </thead>
             <tbody>
                 <tr ng-repeat="carrera in carreras">
                     <td>{{carrera.anio}}</td>
                     <td>{{carrera.carrera.nombre}}</td>
-                    <td><a class="btn btn-info" href="plan-de-estudio.html">Plan de Estudio</a>
-                    <a class="btn btn-warning" href="lista-materias.html">Listado de Materias</a></td>
+                    <td><a class="btn btn-info" href="plan-de-estudio.html">Plan de Estudio</a></td>
                 </tr>
             </tbody>
         </table>
