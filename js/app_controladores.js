@@ -8,29 +8,23 @@ var App = angular.module('Listado_Materias', []);
         var url_posiblesCursantes = 'http://gcu-api.herokuapp.com:80/planes/1/materias/probables-cursantes'
         
          $http({method: 'GET', 
-               url: url_carreras,
-              })
-        
-        .success(function(data){
-           
-            $scope.carreras = data; 
-        });
+               url: url_carreras
+          }).success(function(data){
+             $scope.planes = data;
+        })
         
         $http({method: 'GET', 
-               url: url_planMaterias,
-              })
-        
-        .success(function(data){
+               url: url_planMaterias
+         }).success(function(data){
            
-            $scope.planMaterias = data; 
+            $scope.materias = data;
         });
                 
         $http({method: 'GET', 
-               url: url_posiblesCursantes,
-              })
-        
-        .success(function(data){
+               url: url_posiblesCursantes
+         }).success(function(data){
            
             $scope.posiblesCursantes = data; 
         });
+
     });
