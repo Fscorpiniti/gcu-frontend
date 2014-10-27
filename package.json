@@ -1,0 +1,19 @@
+{
+  "name": "gcu-web",
+  "version": "1.0.0",
+  "description": "app web para gcu",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Fscorpiniti/gcu-frontend.git"
+  },
+  "author": "fscorpiniti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fscorpiniti/gcu-frontend/issues"
+  },
+  "homepage": "https://github.com/Fscorpiniti/gcu-frontend"
+}
