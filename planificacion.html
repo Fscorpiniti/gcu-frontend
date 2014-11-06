@@ -78,7 +78,7 @@
                 <li class="dropdown">
                     <a href="planificacion.html" class="active ajax-link">
                         <i class="fa fa-table"></i>
-                        <span class="hidden-xs">Planificar Cuatrimestre Plan 2008 </span>
+                        <span class="hidden-xs">Planificar Cuatrimestres Plan 2008 </span>
                     </a>
                 </li>
             </ul>
@@ -92,24 +92,14 @@
                             <div class="box-header">
                                 <div class="box-name">
                                     <i class="fa fa-table"></i>
-                                    <span>Planificacion de cuatrimestre 2008</span>
+                                    <span>Planificacion de cuatrimestres - Plan 2008</span>
                                 </div>
                                 <div class="no-move"></div>
                             </div>
-                            <div class="box-content">
-                                <label>Seleccione el cuatrimestre del año</label>
+                            <div id="divImpar" class="box-content">
+                                <label>Primer cuatrimestre (1 año - 1 cuatrimestre)</label>
                                 <br>
                                 <br>
-                                 <label>
-                                    <input type="radio" name="radioCuatrimestre" value="par">
-                                    Primero
-                                </label>
-                                </p>
-                                <label>
-                                    <input type="radio" name="radioCuatrimestre" value="impar">
-                                    Segundo
-                                </label>
-                                <hr>
                                 <table class="table">
                                     <thead bgcolor="#E0F8F7">
                                     <tr class="info">
@@ -124,14 +114,293 @@
 
                                     <tbody>
                                     
-                                    <!--
-                                        RECORRIDO PARA MOSTRAR MATERIAS POR DIAS
 
-                                    <tr ng-repeat="semana in planificacionSemana">
-                                        <td>{{}}</td>
-                                        <td>{{}}</td>
-                                    -->
-                                        
+                                    <tr ng-repeat="primerCuatri in planificacionPrimerCuatri">
+                                        <td>{{primerCuatri.lunes.materia.materia.nombre}}</td>
+                                        <td>{{primerCuatri.martes.materia.materia.nombre}}</td>
+                                        <td>{{primerCuatri.miercoles.materia.materia.nombre}}</td>
+                                        <td>{{primerCuatri.jueves.materia.materia.nombre}}</td>
+                                        <td>{{primerCuatri.viernes.materia.materia.nombre}}</td>
+                                        <td>{{primerCuatri.sabado.materia.materia.nombre}}</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <br>
+                                <label>Tercer Cuatrimestre (2 año - 1 cuatrimestre)</label>
+                                <br>
+                                <br>
+                                <table class="table">
+                                    <thead bgcolor="#E0F8F7">
+                                    <tr class="info">
+                                        <th class="span1"><strong>Lunes</strong></th>
+                                        <th class="span1"><strong>Martes</strong></th>
+                                        <th class="span1"><strong>Miércoles</strong></th>
+                                        <th class="span1"><strong>Jueves</strong></th>
+                                        <th class="span3"><strong>Viernes</strong></th>
+                                        <th class="span1"><strong>Sábado</strong></th>
+                                    </tr>
+                                    </thead>
+
+                                    <tbody>
+
+                                    <tr ng-repeat="tercerCuatri in planificacionTercerCuatri">
+                                        <td>{{tercerCuatri.lunes.materia.materia.nombre}}</td>
+                                        <td>{{tercerCuatri.martes.materia.materia.nombre}}</td>
+                                        <td>{{tercerCuatri.miercoles.materia.materia.nombre}}</td>
+                                        <td>{{tercerCuatri.jueves.materia.materia.nombre}}</td>
+                                        <td>{{tercerCuatri.viernes.materia.materia.nombre}}</td>
+                                        <td>{{tercerCuatri.sabado.materia.materia.nombre}}</td>
+                                    </tr>
+
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <br>
+                                <br>
+                                <label>Quinto Cuatrimestre (3 año - 1 cuatrimestre)</label>
+                                <br>
+                                <br>
+                                <table class="table">
+                                    <thead bgcolor="#E0F8F7">
+                                    <tr class="info">
+                                        <th class="span1"><strong>Lunes</strong></th>
+                                        <th class="span1"><strong>Martes</strong></th>
+                                        <th class="span1"><strong>Miércoles</strong></th>
+                                        <th class="span1"><strong>Jueves</strong></th>
+                                        <th class="span3"><strong>Viernes</strong></th>
+                                        <th class="span1"><strong>Sábado</strong></th>
+                                    </tr>
+                                    </thead>
+
+                                    <tbody>
+
+                                    <tr ng-repeat="quintoCuatri in planificacionQuintoCuatri">
+                                        <td>{{quintoCuatri.lunes.materia.materia.nombre}}</td>
+                                        <td>{{quintoCuatri.martes.materia.materia.nombre}}</td>
+                                        <td>{{quintoCuatri.miercoles.materia.materia.nombre}}</td>
+                                        <td>{{quintoCuatri.jueves.materia.materia.nombre}}</td>
+                                        <td>{{quintoCuatri.viernes.materia.materia.nombre}}</td>
+                                        <td>{{quintoCuatri.sabado.materia.materia.nombre}}</td>
+                                    </tr>
+
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <br>
+                                <br>
+                                <label>Septimo Cuatrimestre (4 año - 1 cuatrimestre)</label>
+                                <br>
+                                <br>
+                                <table class="table">
+                                    <thead bgcolor="#E0F8F7">
+                                    <tr class="info">
+                                        <th class="span1"><strong>Lunes</strong></th>
+                                        <th class="span1"><strong>Martes</strong></th>
+                                        <th class="span1"><strong>Miércoles</strong></th>
+                                        <th class="span1"><strong>Jueves</strong></th>
+                                        <th class="span3"><strong>Viernes</strong></th>
+                                        <th class="span1"><strong>Sábado</strong></th>
+                                    </tr>
+                                    </thead>
+
+                                    <tbody>
+
+                                    <tr ng-repeat="septimoCuatri in planificacionSeptimoCuatri">
+                                        <td>{{septimoCuatri.lunes.materia.materia.nombre}}</td>
+                                        <td>{{septimoCuatri.martes.materia.materia.nombre}}</td>
+                                        <td>{{septimoCuatri.miercoles.materia.materia.nombre}}</td>
+                                        <td>{{septimoCuatri.jueves.materia.materia.nombre}}</td>
+                                        <td>{{septimoCuatri.viernes.materia.materia.nombre}}</td>
+                                        <td>{{septimoCuatri.sabado.materia.materia.nombre}}</td>
+                                    </tr>
+
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <br>
+                                <br>
+                                <label>Noveno Cuatrimestre (5 año - 1 cuatrimestre)</label>
+                                <br>
+                                <br>
+                                <table class="table">
+                                    <thead bgcolor="#E0F8F7">
+                                    <tr class="info">
+                                        <th class="span1"><strong>Lunes</strong></th>
+                                        <th class="span1"><strong>Martes</strong></th>
+                                        <th class="span1"><strong>Miércoles</strong></th>
+                                        <th class="span1"><strong>Jueves</strong></th>
+                                        <th class="span3"><strong>Viernes</strong></th>
+                                        <th class="span1"><strong>Sábado</strong></th>
+                                    </tr>
+                                    </thead>
+
+                                    <tbody>
+
+                                    <tr ng-repeat="novenoCuatri in planificacionNovenoCuatri">
+                                        <td>{{novenoCuatri.lunes.materia.materia.nombre}}</td>
+                                        <td>{{novenoCuatri.martes.materia.materia.nombre}}</td>
+                                        <td>{{novenoCuatri.miercoles.materia.materia.nombre}}</td>
+                                        <td>{{novenoCuatri.jueves.materia.materia.nombre}}</td>
+                                        <td>{{novenoCuatri.viernes.materia.materia.nombre}}</td>
+                                        <td>{{novenoCuatri.sabado.materia.materia.nombre}}</td>
+                                    </tr>
+
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <br>
+                            </div>
+                            <hr>
+                            <div id="divPar" class="box-content">
+                                <label>Segundo cuatrimestre (1 año - 2 cuatrimestre)</label>
+                                <br>
+                                <br>
+                                <table class="table">
+                                    <thead bgcolor="#E0F8F7">
+                                    <tr class="info">
+                                        <th class="span1"><strong>Lunes</strong></th>
+                                        <th class="span1"><strong>Martes</strong></th>
+                                        <th class="span1"><strong>Miércoles</strong></th>
+                                        <th class="span1"><strong>Jueves</strong></th>
+                                        <th class="span3"><strong>Viernes</strong></th>
+                                        <th class="span1"><strong>Sábado</strong></th>
+                                    </tr>
+                                    </thead>
+
+                                    <tbody>
+
+                                    <tr ng-repeat="cuatri in planificacionSegundoCuatri">
+                                        <td>{{cuatri.lunes.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.martes.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.miercoles.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.jueves.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.viernes.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.sabado.materia.materia.nombre}}</td>
+                                    </tr>
+
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <br>
+                                <label>Cuarto Cuatrimestre (2 año - 2 cuatrimestre)</label>
+                                <br>
+                                <br>
+                                <table class="table">
+                                    <thead bgcolor="#E0F8F7">
+                                    <tr class="info">
+                                        <th class="span1"><strong>Lunes</strong></th>
+                                        <th class="span1"><strong>Martes</strong></th>
+                                        <th class="span1"><strong>Miércoles</strong></th>
+                                        <th class="span1"><strong>Jueves</strong></th>
+                                        <th class="span3"><strong>Viernes</strong></th>
+                                        <th class="span1"><strong>Sábado</strong></th>
+                                    </tr>
+                                    </thead>
+
+                                    <tbody>
+
+                                    <tr ng-repeat="cuatri in planificacionCuartoCuatri">
+                                        <td>{{cuatri.lunes.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.martes.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.miercoles.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.jueves.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.viernes.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.sabado.materia.materia.nombre}}</td>
+                                    </tr>
+
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <br>
+                                <br>
+                                <label>Sexto Cuatrimestre (3 año - 2 cuatrimestre)</label>
+                                <br>
+                                <br>
+                                <table class="table">
+                                    <thead bgcolor="#E0F8F7">
+                                    <tr class="info">
+                                        <th class="span1"><strong>Lunes</strong></th>
+                                        <th class="span1"><strong>Martes</strong></th>
+                                        <th class="span1"><strong>Miércoles</strong></th>
+                                        <th class="span1"><strong>Jueves</strong></th>
+                                        <th class="span3"><strong>Viernes</strong></th>
+                                        <th class="span1"><strong>Sábado</strong></th>
+                                    </tr>
+                                    </thead>
+
+                                    <tbody>
+
+                                    <tr ng-repeat="cuatri in planificacionSextoCuatri">
+                                        <td>{{cuatri.lunes.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.martes.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.miercoles.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.jueves.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.viernes.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.sabado.materia.materia.nombre}}</td>
+                                    </tr>
+
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <br>
+                                <br>
+                                <label>Octavo Cuatrimestre (4 año - 2 cuatrimestre)</label>
+                                <br>
+                                <br>
+                                <table class="table">
+                                    <thead bgcolor="#E0F8F7">
+                                    <tr class="info">
+                                        <th class="span1"><strong>Lunes</strong></th>
+                                        <th class="span1"><strong>Martes</strong></th>
+                                        <th class="span1"><strong>Miércoles</strong></th>
+                                        <th class="span1"><strong>Jueves</strong></th>
+                                        <th class="span3"><strong>Viernes</strong></th>
+                                        <th class="span1"><strong>Sábado</strong></th>
+                                    </tr>
+                                    </thead>
+
+                                    <tbody>
+
+                                    <tr ng-repeat="cuatri in planificacionOctavoCuatri">
+                                        <td>{{cuatri.lunes.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.martes.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.miercoles.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.jueves.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.viernes.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.sabado.materia.materia.nombre}}</td>
+                                    </tr>
+
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <br>
+                                <br>
+                                <label>Decimo Cuatrimestre (5 año - 2 cuatrimestre)</label>
+                                <br>
+                                <br>
+                                <table class="table">
+                                    <thead bgcolor="#E0F8F7">
+                                    <tr class="info">
+                                        <th class="span1"><strong>Lunes</strong></th>
+                                        <th class="span1"><strong>Martes</strong></th>
+                                        <th class="span1"><strong>Miércoles</strong></th>
+                                        <th class="span1"><strong>Jueves</strong></th>
+                                        <th class="span3"><strong>Viernes</strong></th>
+                                        <th class="span1"><strong>Sábado</strong></th>
+                                    </tr>
+                                    </thead>
+
+                                    <tbody>
+
+                                    <tr ng-repeat="cuatri in planificacionDecimoCuatri">
+                                        <td>{{cuatri.lunes.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.martes.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.miercoles.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.jueves.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.viernes.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.sabado.materia.materia.nombre}}</td>
+                                    </tr>
+
                                     </tr>
                                     </tbody>
                                 </table>
