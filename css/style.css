@@ -57,7 +57,8 @@ a.show-sidebar:hover {
   color:#000;
 }
 #sidebar-left {
-  position:relative;
+  position:fixed;
+    width: auto;
   z-index: inherit;
   padding-bottom: 3000px !important;
   margin-bottom: -3000px !important;
@@ -71,6 +72,7 @@ a.show-sidebar:hover {
   padding-bottom: 3000px !important;
   margin-bottom: -2980px !important;
   overflow: hidden;
+    float: right;
 }
 .full-content {
   overflow: hidden;
@@ -357,6 +359,7 @@ a.show-sidebar:hover {
   z-index: 1;
   display: block;
 }
+
 .box-content {
   position: relative;
   -webkit-border-radius: 0 0 3px 3px;
@@ -407,6 +410,7 @@ a.show-sidebar:hover {
   width: 0%;
   padding: 0;
 }
+
 .sidebar-show #sidebar-left.col-xs-2 {
   opacity: 1;
   width: 16.666666666666664%;
