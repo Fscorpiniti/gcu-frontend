@@ -32,7 +32,7 @@ var App = angular.module('Listado_Materias', []);
         $http({method: 'GET', 
                url: url_planificacion_cuatri_par
          }).success(function(data){
-           
+            $scope.scorePar = data.scores;
             $scope.planificacionSegundoCuatri = data.nivelesSegundoCuatri;
             $scope.planificacionCuartoCuatri = data.nivelesCuartoCuatri;
             $scope.planificacionSextoCuatri = data.nivelesSextoCuatri;
@@ -43,7 +43,7 @@ var App = angular.module('Listado_Materias', []);
         $http({method: 'GET', 
                url: url_planificacion_cuatri_impar
          }).success(function(data){
-           
+            $scope.scoreImpar = data.scores;
             $scope.planificacionPrimerCuatri = data.nivelesPrimerCuatri;
             $scope.planificacionTercerCuatri = data.nivelesTercerCuatri;
             $scope.planificacionQuintoCuatri = data.nivelesQuintoCuatri;
