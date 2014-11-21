@@ -97,25 +97,8 @@
                                 <div class="no-move"></div>
                             </div>
                             <div id="divImpar" class="box-content">
-                                <label>Score cuatrimestres impares</label>
-                                <br>
-                                <br>
-                                <table class="table">
-                                    <thead bgcolor="#E0F8F7">
-                                    <tr class="info">
-                                        <th class="span1"><strong>Cantidad de materias</strong></th>
-                                        <th class="span1"><strong>Cantidad de alumnos</strong></th>
-                                    </tr>
-                                    </thead>
-
-                                    <tbody>
-                                    
-                                    <tr ng-repeat="unScore in scoreImpar">
-                                        <td>{{unScore.cantidad_materias}}</td>
-                                        <td>{{unScore.alumnos.length}}</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
+                                <label>Score Final Cuatrimestre Impar: </label>
+                                <label>{{scoreFinalImpar}}</label>
                                 <br>
                                 <label>Primer cuatrimestre (1 año - 1 cuatrimestre)</label>
                                 <br>
@@ -272,25 +255,8 @@
                             </div>
                             <hr>
                             <div id="divPar" class="box-content">
-                                <label>Score cuatrimestres pares</label>
-                                <br>
-                                <br>
-                                <table class="table">
-                                    <thead bgcolor="#E0F8F7">
-                                    <tr class="info">
-                                        <th class="span1"><strong>Cantidad de materias</strong></th>
-                                        <th class="span1"><strong>Cantidad de alumnos</strong></th>
-                                    </tr>
-                                    </thead>
-
-                                    <tbody>
-                                    
-                                    <tr ng-repeat="unScore in scorePar">
-                                        <td>{{unScore.cantidad_materias}}</td>
-                                        <td>{{unScore.alumnos.length}}</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
+                                <label>Score Final Cuatrimestre Pares: </label>
+                                <label>{{scoreFinalPar}}</label>
                                 <br>
                                 <label>Segundo cuatrimestre (1 año - 2 cuatrimestre)</label>
                                 <br>
