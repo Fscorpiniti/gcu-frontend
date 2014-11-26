@@ -3,11 +3,11 @@ var App = angular.module('Listado_Materias', []);
 
     App.controller('Controlador_GET', function($scope, $http){
 
-        var url_carreras  = 'http://localhost:8080/gcu/carreras/1/planes';
-        var url_planMaterias = 'http://localhost:8080/gcu/planes/1/materias';
-        var url_posiblesCursantes = 'http://localhost:8080/gcu/planes/1/materias/probables-cursantes'
-        var url_planificacion_cuatri_par = 'http://localhost:8080/gcu/planificacion/par'
-        var url_planificacion_cuatri_impar = 'http://localhost:8080/gcu/planificacion/impar'
+        var url_carreras  = 'http://gcu-api.herokuapp.com:80/carreras/1/planes';
+        var url_planMaterias = 'http://gcu-api.herokuapp.com:80/planes/1/materias';
+        var url_posiblesCursantes = 'http://gcu-api.herokuapp.com:80/planes/1/materias/probables-cursantes'
+        var url_planificacion_cuatri_par = 'http://gcu-api.herokuapp.com:80/planificacion/par'
+        var url_planificacion_cuatri_impar = 'http://gcu-api.herokuapp.com:80/planificacion/impar'
         
         $http({method: 'GET',
                url: url_carreras
