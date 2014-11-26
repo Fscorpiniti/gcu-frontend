@@ -97,7 +97,8 @@
                                 <div class="no-move"></div>
                             </div>
                             <div id="divImpar" class="box-content">
-                                <label>Score cuatrimestres impares</label>
+                                <label>Score cuatrimestres impares : </label>
+                                <label>{{scoreUnificadoImpar}}</label>
                                 <br>
                                 <br>
                                 <table class="table">
@@ -110,7 +111,7 @@
 
                                     <tbody>
                                     
-                                    <tr ng-repeat="unScore in scoreImpar">
+                                    <tr ng-repeat="unScore in scoresImpares">
                                         <td>{{unScore.cantidad_materias}}</td>
                                         <td>{{unScore.alumnos.length}}</td>
                                     </tr>
@@ -118,6 +119,10 @@
                                 </table>
                                 <br>
                                 <label>Primer cuatrimestre (1 año - 1 cuatrimestre)</label>
+                                <br>
+                                <br>
+                                <label>Score primer cuatrimestre : </label>
+                                <label>{{scorePrimerCuatri}}</label>
                                 <br>
                                 <br>
                                 <table class="table">
@@ -147,6 +152,10 @@
                                 </table>
                                 <br>
                                 <label>Tercer Cuatrimestre (2 año - 1 cuatrimestre)</label>
+                                <br>
+                                <br>
+                                <label>Score tercer cuatrimestre : </label>
+                                <label>{{scoreTercerCuatri}}</label>
                                 <br>
                                 <br>
                                 <table class="table">
@@ -180,6 +189,10 @@
                                 <label>Quinto Cuatrimestre (3 año - 1 cuatrimestre)</label>
                                 <br>
                                 <br>
+                                <label>Score quinto cuatrimestre : </label>
+                                <label>{{scoreQuintoCuatri}}</label>
+                                <br>
+                                <br>
                                 <table class="table">
                                     <thead bgcolor="#E0F8F7">
                                     <tr class="info">
@@ -209,6 +222,10 @@
                                 <br>
                                 <br>
                                 <label>Septimo Cuatrimestre (4 año - 1 cuatrimestre)</label>
+                                <br>
+                                <br>
+                                <label>Score septimo cuatrimestre : </label>
+                                <label>{{scoreSeptimoCuatri}}</label>
                                 <br>
                                 <br>
                                 <table class="table">
@@ -242,6 +259,10 @@
                                 <label>Noveno Cuatrimestre (5 año - 1 cuatrimestre)</label>
                                 <br>
                                 <br>
+                                <label>Score noveno cuatrimestre : </label>
+                                <label>{{scoreNovenoCuatri}}</label>
+                                <br>
+                                <br>
                                 <table class="table">
                                     <thead bgcolor="#E0F8F7">
                                     <tr class="info">
@@ -272,7 +293,8 @@
                             </div>
                             <hr>
                             <div id="divPar" class="box-content">
-                                <label>Score cuatrimestres pares</label>
+                                <label>Score cuatrimestres pares :</label>
+                                <label>{{scoreUnificadoPar}}</label>
                                 <br>
                                 <br>
                                 <table class="table">
@@ -285,7 +307,7 @@
 
                                     <tbody>
                                     
-                                    <tr ng-repeat="unScore in scorePar">
+                                    <tr ng-repeat="unScore in scoresPares">
                                         <td>{{unScore.cantidad_materias}}</td>
                                         <td>{{unScore.alumnos.length}}</td>
                                     </tr>
@@ -293,6 +315,10 @@
                                 </table>
                                 <br>
                                 <label>Segundo cuatrimestre (1 año - 2 cuatrimestre)</label>
+                                <br>
+                                <br>
+                                <label>Score segundo cuatrimestre : </label>
+                                <label>{{scoreSegundoCuatri}}</label>
                                 <br>
                                 <br>
                                 <table class="table">
@@ -323,6 +349,10 @@
                                 </table>
                                 <br>
                                 <label>Cuarto Cuatrimestre (2 año - 2 cuatrimestre)</label>
+                                <br>
+                                <br>
+                                <label>Score cuarto cuatrimestre : </label>
+                                <label>{{scoreCuartoCuatri}}</label>
                                 <br>
                                 <br>
                                 <table class="table">
@@ -356,6 +386,10 @@
                                 <label>Sexto Cuatrimestre (3 año - 2 cuatrimestre)</label>
                                 <br>
                                 <br>
+                                <label>Score sexto cuatrimestre : </label>
+                                <label>{{scoreSextoCuatri}}</label>
+                                <br>
+                                <br>
                                 <table class="table">
                                     <thead bgcolor="#E0F8F7">
                                     <tr class="info">
@@ -387,6 +421,10 @@
                                 <label>Octavo Cuatrimestre (4 año - 2 cuatrimestre)</label>
                                 <br>
                                 <br>
+                                <label>Score octavo cuatrimestre : </label>
+                                <label>{{scoreOctavoCuatri}}</label>
+                                <br>
+                                <br>
                                 <table class="table">
                                     <thead bgcolor="#E0F8F7">
                                     <tr class="info">
@@ -416,6 +454,10 @@
                                 <br>
                                 <br>
                                 <label>Decimo Cuatrimestre (5 año - 2 cuatrimestre)</label>
+                                <br>
+                                <br>
+                                <label>Score decimo cuatrimestre : </label>
+                                <label>{{scoreDecimoCuatri}}</label>
                                 <br>
                                 <br>
                                 <table class="table">

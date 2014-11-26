@@ -20,24 +20,6 @@
     <canvas id="canvas"></canvas>
     <i class="fa fa-lock" id="screen_unlock"></i>
 </div>
-<div id="modalbox">
-    <div class="devoops-modal">
-        <div class="devoops-modal-header">
-            <div class="modal-header-name">
-                <span>Basic table</span>
-            </div>
-            <div class="box-icons">
-                <a class="close-link">
-                    <i class="fa fa-times"></i>
-                </a>
-            </div>
-        </div>
-        <div class="devoops-modal-inner">
-        </div>
-        <div class="devoops-modal-bottom">
-        </div>
-    </div>
-</div>
 <header class="navbar">
     <div class="container-fluid expanded-panel">
         <div class="row">
@@ -113,7 +95,6 @@
                                     </thead>
 
                                     <tbody>
-                                    <!--                 <tr ng-repeat="plan in planMaterias">-->
 
                                     <!-- Saco los datos de los PlanMateria de los DTOs -->
                                     <tr ng-repeat="dto in posiblesCursantes">
@@ -122,7 +103,7 @@
                                         <td>{{dto.materia.cuatrimestre}}</td>
                                         <td>{{dto.materia.materia.codigo}}</td>
                                         <td>{{dto.materia.materia.nombre}}</td>
-                                        <td>{{dto.alumnosPosiblesCursantes.length}}</a></td>
+                                        <td>{{dto.alumnosPosiblesCursantes.length}}</td>
                                         <td>{{dto.materia.correlativa.materia.codigo}}</td>
                                         <td>{{dto.materia.correlativa.materia.nombre}}</td>
                                         <td>{{dto.materia.planEstudio.anio}}</td>
