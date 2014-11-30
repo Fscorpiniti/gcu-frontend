@@ -6,7 +6,7 @@ var App = angular.module('Listado_Materias', []);
         var url_posiblesCursantes = 'http://localhost:8080/gcu/planes/1/materias/probables-cursantes'
         var url_planificacion_cuatri_par = 'http://localhost:8080/gcu/planificacion/par'
         var url_planificacion_cuatri_impar = 'http://localhost:8080/gcu/planificacion/impar'
-        
+
         $http({method: 'GET',
                url: url_carreras + '?access_token=' + $window.sessionStorage.token
           }).success(function(data){
