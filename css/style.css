@@ -6,10 +6,6 @@ body {
   overflow-y:hidden;
   margin-right: 15px;
 }
-.modal-open #content {z-index: inherit;}
-.body-expanded .expanded-panel, .fancybox-margin .expanded-panel, .modal-open .expanded-panel {
-  margin-right: 15px;
-}
 .body-screensaver {
   overflow: hidden;
 }
@@ -2139,79 +2135,6 @@ td.beauty-hover {
 }
 .likebox .fa-thumbs-down {
   color:#D15E5E;
-}
-#modalbox {
-  display:none;
-  position: fixed;
-  overflow: auto;
-  overflow-x: hidden;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 5000;
-  background:rgba(0,0,0,0.8);
-}
-#modalbox .devoops-modal {
-  position:absolute;top:90px;margin-left: -300px;left: 50%;
-  border: 1px solid #f8f8f8;
-  box-shadow: 0 0 20px #6AA6D6;
-  background: transparent;
-  margin-bottom: 20px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  width: 600px;
-  z-index:6000;
-}
-#modalbox .devoops-modal-header {
-  color: #363636;
-  font-size: 16px;
-  position:relative;
-  overflow: hidden;
-  background: #f5f5f5;
-  border-bottom: 1px solid #E4E4E4;
-  height: 28px;
-}
-#modalbox .devoops-modal-inner {
-  position: relative;
-  overflow: hidden;
-  padding: 15px;
-  background: #FCFCFC;
-}
-#modalbox .devoops-modal-bottom {
-  position: relative;
-  overflow: hidden;
-  padding: 15px;
-  background: #d8d8d8;
-}
-.pagination > li > a, .pagination > li > span {
-  position: relative;
-  float: left;
-  padding: 4px 10px;
-  margin-left: -1px;
-  line-height: 1.428571429;
-  color: #969696;
-  text-decoration: none;
-  background-color: #F5F5F5;
-  border: 1px solid #D8D8D8;
-}
-.pagination > li > a:hover, .pagination > li > span:hover, .pagination > li > a:focus, .pagination > li > span:focus {
-  color: #8A8A8A;
-  background-color: #eee;
-}
-.pagination > .disabled > span, .pagination > .disabled > span:hover, .pagination > .disabled > span:focus, .pagination > .disabled > a, .pagination > .disabled > a:hover, .pagination > .disabled > a:focus {
-  color: #979797;
-  cursor: not-allowed;
-  background-color: #FCFCFC;
-  border-color: #D8D8D8;
-}
-.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
-  z-index: 2;
-  color: #fff;
-  cursor: default;
-  background-color: #6AA6D6;
-  border-color: #6AA6D6;
 }
 .fancybox-nav {
   position: fixed;

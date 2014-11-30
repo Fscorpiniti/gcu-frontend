@@ -1,8 +1,6 @@
-
 var App = angular.module('Listado_Materias', []);
 
-    App.controller('Controlador_GET', function($scope, $http){
-
+    App.controller('Controlador_GET', function($scope, $http, $window){
         var url_carreras  = 'http://localhost:8080/gcu/carreras/1/planes';
         var url_planMaterias = 'http://localhost:8080/gcu/planes/1/materias';
         var url_posiblesCursantes = 'http://localhost:8080/gcu/planes/1/materias/probables-cursantes'
@@ -10,27 +8,27 @@ var App = angular.module('Listado_Materias', []);
         var url_planificacion_cuatri_impar = 'http://localhost:8080/gcu/planificacion/impar'
         
         $http({method: 'GET',
-               url: url_carreras
+               url: url_carreras + '?access_token=' + $window.sessionStorage.token
           }).success(function(data){
              $scope.planes = data;
         })
 
         $http({method: 'GET', 
-               url: url_planMaterias
+               url: url_planMaterias + '?access_token=' + $window.sessionStorage.token
          }).success(function(data){
            
             $scope.materias = data;
         });
                 
         $http({method: 'GET', 
-               url: url_posiblesCursantes
+               url: url_posiblesCursantes + '?access_token=' + $window.sessionStorage.token
          }).success(function(data){
            
             $scope.posiblesCursantes = data; 
         });
         
         $http({method: 'GET', 
-               url: url_planificacion_cuatri_par
+               url: url_planificacion_cuatri_par + '?access_token=' + $window.sessionStorage.token
          }).success(function(data){
             $scope.scoresPares = data.scores;
             $scope.scoreUnificadoPar = data.score;
@@ -47,7 +45,7 @@ var App = angular.module('Listado_Materias', []);
         });
         
         $http({method: 'GET', 
-               url: url_planificacion_cuatri_impar
+               url: url_planificacion_cuatri_impar + '?access_token=' + $window.sessionStorage.token
          }).success(function(data){
             $scope.scoresImpares = data.scores;
             $scope.scoreUnificadoImpar = data.score;

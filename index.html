@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lng="es" ng-app="Listado_Materias">
+<html lng="es">
 <head>
-    <meta charset="utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
     <title>GCU</title>
     <link href="plugins/bootstrap/bootstrap.css" rel="stylesheet">
@@ -9,90 +9,29 @@
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
     <link href="css/style.css" rel="stylesheet">
-
     <script type="text/javascript" src="js/angular.min.js"></script>
-    <script src="js/app_controladores.js"></script>
+    <script src="js/loginController.js"></script>
 </head>
 
-<body ng-controller="Controlador_GET">
+<body>
 <!--Start Header-->
-<div id="screensaver">
-    <canvas id="canvas"></canvas>
-    <i class="fa fa-lock" id="screen_unlock"></i>
-</div>
-<div id="modalbox">
-    <div class="devoops-modal">
-        <div class="devoops-modal-header">
-            <div class="modal-header-name">
-                <span>Basic table</span>
-            </div>
-            <div class="box-icons">
-                <a class="close-link">
-                    <i class="fa fa-times"></i>
-                </a>
-            </div>
-        </div>
-        <div class="devoops-modal-inner">
-        </div>
-        <div class="devoops-modal-bottom">
-        </div>
-    </div>
-</div>
-<header class="navbar">
-    <div class="container-fluid expanded-panel">
-        <div class="row">
-            <div id="logo" class="col-xs-12 col-sm-2">
-                <a href="index.html">GCU</a>
-            </div>
-            <div id="top-panel" class="col-xs-12 col-sm-10">
-                <div class="row">
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-<!--End Header-->
-<!--Start Container-->
-<div id="main" class="container-fluid">
-    <div class="row">
-        <div id="sidebar-left" class="col-xs-2 col-sm-2">
-            <ul class="nav main-menu">
-               <li>
-                    <a href="index.html" class="active ajax-link">
-                        <i class="fa fa-dashboard"></i>
-                        <span class="hidden-xs">Dashboard</span>
-                    </a>
-               </li>
-                <li class="dropdown">
-                    <a href="planes-estudio.html" class="dropdown-toggle">
-                        <i class="fa fa-table"></i>
-                        <span class="hidden-xs">Consultar Planes de estudio</span>
-                    </a>
-                </li>
-                <li class="dropdown">
-                    <a href="materias.html" class="dropdown-toggle">
-                        <i class="fa fa-table"></i>
-                        <span class="hidden-xs">Consultar Materias Plan 2008</span>
-                    </a>
-                </li>
-                <li class="dropdown">
-                    <a href="planificacion.html" class="dropdown-toggle">
-                        <i class="fa fa-table"></i>
-                        <span class="hidden-xs">Planificar cuatrimestres Plan 2008 </span>
-                    </a>
-                </li>
-               </ul>
-        </div>
-        <!--Start Content-->
-        <div id="content" class="col-xs-12 col-sm-10">
-             <div id="ajax-content-new">
-                 <h1>Bienvenido a GCU</h1>
-                 <br>
-                 <p>El Gestor de Carreras Universitarias, o GCU, va a permitir, entre otras acciones, poder planificar un cuatrimestre</p>
-             </div>
-         </div>
-         <!--End Content-->
-    </div>
+<div ng-app="app" ng-controller="appCtrl as userLogin">
+<img src="img/imagen_institucional.jpg" width="80%" height="70%"/>
+    <br>
+    <br>
+<h2>Inicie sesion en GCU: </h2>
+<br>
+<section>
+    <form ng-submit="userLogin.enviar()">
+        Nombre: <input type="search" ng-model="userLogin.fdatos.userName">
+        <br>
+        <br>
+        Password: <input type="password" ng-model="userLogin.fdatos.password">
+        <br>
+        <br>
+        <input type="submit" value="Ingresar">
+    </form>
+</section>
 </div>
 <!--End Container-->
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -105,5 +44,6 @@
 <script src="plugins/tinymce/jquery.tinymce.min.js"></script>
 <!-- All functions for this theme + document.ready processing -->
 <script src="js/devoops.js"></script>
+
 </body>
 </html>
