@@ -13,7 +13,8 @@ function controladorPrincipal($http, $window){
       $http.post(url_login, userLogin.fdatos).success(function(res){
           $window.sessionStorage.token = res;
           $window.location.href = 'dashboard.html';
+      }).error(function(data, status, headers, config) {
+          $window.alert('Nombre de usuario o password incorrecto, vuelva a ingresarlos');
       });
-
     }
 }
