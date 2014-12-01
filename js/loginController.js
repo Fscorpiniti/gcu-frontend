@@ -6,7 +6,7 @@ function controladorPrincipal($http, $window){
     //inicializo un objeto en los datos de formulario
     userLogin.fdatos = {};
 
-    var url_login = 'http://localhost:8080/gcu/login'
+    var url_login = 'login'
 
     // declaro la función enviar
     userLogin.enviar = function(){
