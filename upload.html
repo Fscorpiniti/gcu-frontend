@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lng="es" ng-app="Listado_Materias">
+<html lng="es">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
@@ -11,10 +11,10 @@
     <link href="css/style.css" rel="stylesheet">
 
     <script type="text/javascript" src="js/angular.min.js"></script>
-    <script src="js/app_controladores.js"></script>
+    <script src="js/uploadController.js"></script>
 </head>
 
-<body ng-controller="Controlador_GET">
+<body>
 <!--Start Header-->
 <div id="screensaver">
     <canvas id="canvas"></canvas>
@@ -64,7 +64,7 @@
         <div id="sidebar-left" class="col-xs-2 col-sm-2">
             <ul class="nav main-menu">
                <li>
-                    <a href="dashboard.html" class="active ajax-link">
+                    <a href="dashboard.html" class="dropdown-toggle">
                         <i class="fa fa-dashboard"></i>
                         <span class="hidden-xs">Dashboard</span>
                     </a>
@@ -87,16 +87,16 @@
                         <span class="hidden-xs">Planificar cuatrimestres Plan 2008</span>
                     </a>
                 </li>
-                 <li class="dropdown">
-                    <a href="archivos.html" class="dropdown-toggle">
+                <li class="dropdown">
+                    <a href="upload.html" class="active ajax-link">
                         <i class="fa fa-table"></i>
-                        <span class="hidden-xs">Agregar nuevo archivo de datos</span>
+                        <span class="hidden-xs">Actualizar estado de alumnos</span>
                     </a>
                 </li>
                </ul>
         </div>
         <!--Start Content-->
-        <div id="content" class="col-xs-12 col-sm-10">
+        <div id="content" ng-controller = "myCtrl" class="col-xs-12 col-sm-10">
             <div id="ajax-content-new">
                 <br>
                 <div class="row">
@@ -111,9 +111,9 @@
                             </div>
                             <div class="box-content">
                                 <br>
-                                <input type="file">
+                                <input type="file" file-model="myFile"/>
                                 <br>
-                                <input type="button" class="btn btn-primary" value="Subir">
+                                <button ng-click="uploadFile()" class="btn btn-primary">Procesar archivo</button>
                                 <br>
                             </div>
                         </div>
@@ -135,6 +135,5 @@
 <script src="plugins/tinymce/jquery.tinymce.min.js"></script>
 <!-- All functions for this theme + document.ready processing -->
 <script src="js/devoops.js"></script>
-<script src="js/subir_archivo.js"></script>
 </body>
 </html>
