@@ -34,6 +34,7 @@ myApp.service('fileUpload', ['$http', function ($http) {
 myApp.controller('myCtrl', ['$scope', 'fileUpload', function($scope, fileUpload){
     
     $scope.uploadFile = function(){
+        console.log('fer');
         var file = $scope.myFile;
         var uploadUrl = "http://localhost:8080/gcu/upload";
         fileUpload.uploadFileToUrl(file, uploadUrl);
