@@ -35,7 +35,7 @@ myApp.controller('myCtrl', ['$scope', 'fileUpload', function($scope, fileUpload)
     
     $scope.uploadFile = function(){
         var file = $scope.myFile;
-        var uploadUrl = "http://localhost:8080/gcu/upload";
+        var uploadUrl = "http://gcu-api.herokuapp.com:80/upload";
         fileUpload.uploadFileToUrl(file, uploadUrl);
     };
     
