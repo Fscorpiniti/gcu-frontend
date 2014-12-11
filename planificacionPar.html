@@ -11,10 +11,10 @@
     <link href="css/style.css" rel="stylesheet">
 
     <script type="text/javascript" src="js/angular.min.js"></script>
-    <script src="js/app_controladores.js"></script>
+    <script src="js/controllersGcu.js"></script>
 </head>
 
-<body ng-controller="Controlador_GET">
+<body ng-controller="PlanificacionParController">
 <!--Start Header-->
 <div id="screensaver">
     <canvas id="canvas"></canvas>
@@ -81,9 +81,15 @@
                     </a>
                 </li>
                 <li class="dropdown">
-                    <a href="planificacion.html" class="active ajax-link">
+                    <a href="planificacionPar.html" class="active ajax-link">
                         <i class="fa fa-table"></i>
-                        <span class="hidden-xs">Planificar Cuatrimestres Plan 2008 </span>
+                        <span class="hidden-xs">Planificar Cuatrimestres Pares Plan 2008 </span>
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a href="planificacionImpar.html" class="dropdown-toggle">
+                        <i class="fa fa-table"></i>
+                        <span class="hidden-xs">Planificar Cuatrimestres Impares Plan 2008 </span>
                     </a>
                 </li>
                 <li class="dropdown">
@@ -108,202 +114,6 @@
                                 </div>
                                 <div class="no-move"></div>
                             </div>
-                            <div id="divImpar" class="box-content">
-                                <label>Score cuatrimestres impares : </label>
-                                <label>{{scoreUnificadoImpar}}</label>
-                                <br>
-                                <br>
-                                <table class="table">
-                                    <thead bgcolor="#E0F8F7">
-                                    <tr class="info">
-                                        <th class="span1"><strong>Cantidad de materias</strong></th>
-                                        <th class="span1"><strong>Cantidad de alumnos</strong></th>
-                                    </tr>
-                                    </thead>
-
-                                    <tbody>
-                                    
-                                    <tr ng-repeat="unScore in scoresImpares">
-                                        <td>{{unScore.cantidad_materias}}</td>
-                                        <td>{{unScore.alumnos.length}}</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                                <br>
-                                <label>Primer cuatrimestre (1 año - 1 cuatrimestre)</label>
-                                <br>
-                                <br>
-                                <label>Score primer cuatrimestre : </label>
-                                <label>{{scorePrimerCuatri}}</label>
-                                <br>
-                                <br>
-                                <table class="table">
-                                    <thead bgcolor="#E0F8F7">
-                                    <tr class="info">
-                                        <th class="span1"><strong>Lunes</strong></th>
-                                        <th class="span1"><strong>Martes</strong></th>
-                                        <th class="span1"><strong>Miércoles</strong></th>
-                                        <th class="span1"><strong>Jueves</strong></th>
-                                        <th class="span3"><strong>Viernes</strong></th>
-                                        <th class="span1"><strong>Sábado</strong></th>
-                                    </tr>
-                                    </thead>
-
-                                    <tbody>
-                                    
-
-                                    <tr ng-repeat="primerCuatri in planificacionPrimerCuatri">
-                                        <td>{{primerCuatri.lunes.materia.materia.nombre}}</td>
-                                        <td>{{primerCuatri.martes.materia.materia.nombre}}</td>
-                                        <td>{{primerCuatri.miercoles.materia.materia.nombre}}</td>
-                                        <td>{{primerCuatri.jueves.materia.materia.nombre}}</td>
-                                        <td>{{primerCuatri.viernes.materia.materia.nombre}}</td>
-                                        <td>{{primerCuatri.sabado.materia.materia.nombre}}</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                                <br>
-                                <label>Tercer Cuatrimestre (2 año - 1 cuatrimestre)</label>
-                                <br>
-                                <br>
-                                <label>Score tercer cuatrimestre : </label>
-                                <label>{{scoreTercerCuatri}}</label>
-                                <br>
-                                <br>
-                                <table class="table">
-                                    <thead bgcolor="#E0F8F7">
-                                    <tr class="info">
-                                        <th class="span1"><strong>Lunes</strong></th>
-                                        <th class="span1"><strong>Martes</strong></th>
-                                        <th class="span1"><strong>Miércoles</strong></th>
-                                        <th class="span1"><strong>Jueves</strong></th>
-                                        <th class="span3"><strong>Viernes</strong></th>
-                                        <th class="span1"><strong>Sábado</strong></th>
-                                    </tr>
-                                    </thead>
-
-                                    <tbody>
-
-                                    <tr ng-repeat="tercerCuatri in planificacionTercerCuatri">
-                                        <td>{{tercerCuatri.lunes.materia.materia.nombre}}</td>
-                                        <td>{{tercerCuatri.martes.materia.materia.nombre}}</td>
-                                        <td>{{tercerCuatri.miercoles.materia.materia.nombre}}</td>
-                                        <td>{{tercerCuatri.jueves.materia.materia.nombre}}</td>
-                                        <td>{{tercerCuatri.viernes.materia.materia.nombre}}</td>
-                                        <td>{{tercerCuatri.sabado.materia.materia.nombre}}</td>
-                                    </tr>
-
-                                    </tr>
-                                    </tbody>
-                                </table>
-                                <br>
-                                <br>
-                                <label>Quinto Cuatrimestre (3 año - 1 cuatrimestre)</label>
-                                <br>
-                                <br>
-                                <label>Score quinto cuatrimestre : </label>
-                                <label>{{scoreQuintoCuatri}}</label>
-                                <br>
-                                <br>
-                                <table class="table">
-                                    <thead bgcolor="#E0F8F7">
-                                    <tr class="info">
-                                        <th class="span1"><strong>Lunes</strong></th>
-                                        <th class="span1"><strong>Martes</strong></th>
-                                        <th class="span1"><strong>Miércoles</strong></th>
-                                        <th class="span1"><strong>Jueves</strong></th>
-                                        <th class="span3"><strong>Viernes</strong></th>
-                                        <th class="span1"><strong>Sábado</strong></th>
-                                    </tr>
-                                    </thead>
-
-                                    <tbody>
-
-                                    <tr ng-repeat="quintoCuatri in planificacionQuintoCuatri">
-                                        <td>{{quintoCuatri.lunes.materia.materia.nombre}}</td>
-                                        <td>{{quintoCuatri.martes.materia.materia.nombre}}</td>
-                                        <td>{{quintoCuatri.miercoles.materia.materia.nombre}}</td>
-                                        <td>{{quintoCuatri.jueves.materia.materia.nombre}}</td>
-                                        <td>{{quintoCuatri.viernes.materia.materia.nombre}}</td>
-                                        <td>{{quintoCuatri.sabado.materia.materia.nombre}}</td>
-                                    </tr>
-
-                                    </tr>
-                                    </tbody>
-                                </table>
-                                <br>
-                                <br>
-                                <label>Septimo Cuatrimestre (4 año - 1 cuatrimestre)</label>
-                                <br>
-                                <br>
-                                <label>Score septimo cuatrimestre : </label>
-                                <label>{{scoreSeptimoCuatri}}</label>
-                                <br>
-                                <br>
-                                <table class="table">
-                                    <thead bgcolor="#E0F8F7">
-                                    <tr class="info">
-                                        <th class="span1"><strong>Lunes</strong></th>
-                                        <th class="span1"><strong>Martes</strong></th>
-                                        <th class="span1"><strong>Miércoles</strong></th>
-                                        <th class="span1"><strong>Jueves</strong></th>
-                                        <th class="span3"><strong>Viernes</strong></th>
-                                        <th class="span1"><strong>Sábado</strong></th>
-                                    </tr>
-                                    </thead>
-
-                                    <tbody>
-
-                                    <tr ng-repeat="septimoCuatri in planificacionSeptimoCuatri">
-                                        <td>{{septimoCuatri.lunes.materia.materia.nombre}}</td>
-                                        <td>{{septimoCuatri.martes.materia.materia.nombre}}</td>
-                                        <td>{{septimoCuatri.miercoles.materia.materia.nombre}}</td>
-                                        <td>{{septimoCuatri.jueves.materia.materia.nombre}}</td>
-                                        <td>{{septimoCuatri.viernes.materia.materia.nombre}}</td>
-                                        <td>{{septimoCuatri.sabado.materia.materia.nombre}}</td>
-                                    </tr>
-
-                                    </tr>
-                                    </tbody>
-                                </table>
-                                <br>
-                                <br>
-                                <label>Noveno Cuatrimestre (5 año - 1 cuatrimestre)</label>
-                                <br>
-                                <br>
-                                <label>Score noveno cuatrimestre : </label>
-                                <label>{{scoreNovenoCuatri}}</label>
-                                <br>
-                                <br>
-                                <table class="table">
-                                    <thead bgcolor="#E0F8F7">
-                                    <tr class="info">
-                                        <th class="span1"><strong>Lunes</strong></th>
-                                        <th class="span1"><strong>Martes</strong></th>
-                                        <th class="span1"><strong>Miércoles</strong></th>
-                                        <th class="span1"><strong>Jueves</strong></th>
-                                        <th class="span3"><strong>Viernes</strong></th>
-                                        <th class="span1"><strong>Sábado</strong></th>
-                                    </tr>
-                                    </thead>
-
-                                    <tbody>
-
-                                    <tr ng-repeat="novenoCuatri in planificacionNovenoCuatri">
-                                        <td>{{novenoCuatri.lunes.materia.materia.nombre}}</td>
-                                        <td>{{novenoCuatri.martes.materia.materia.nombre}}</td>
-                                        <td>{{novenoCuatri.miercoles.materia.materia.nombre}}</td>
-                                        <td>{{novenoCuatri.jueves.materia.materia.nombre}}</td>
-                                        <td>{{novenoCuatri.viernes.materia.materia.nombre}}</td>
-                                        <td>{{novenoCuatri.sabado.materia.materia.nombre}}</td>
-                                    </tr>
-
-                                    </tr>
-                                    </tbody>
-                                </table>
-                                <br>
-                            </div>
-                            <hr>
                             <div id="divPar" class="box-content">
                                 <label>Score cuatrimestres pares :</label>
                                 <label>{{scoreUnificadoPar}}</label>

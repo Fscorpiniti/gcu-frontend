@@ -1,0 +1,71 @@
+var App = angular.module('Listado_Materias', []);
+
+App.controller('PlanEstudioController', function($scope, $http, $window){
+        
+   var url_carreras  = 'http://localhost:8080/gcu/carreras/1/planes';
+
+   $http({method: 'GET',
+         url: url_carreras + '?access_token=' + $window.sessionStorage.token
+   }).success(function(data){
+         $scope.planes = data;
+   })
+
+});
+
+App.controller('MateriasController', function($scope, $http, $window){
+
+    var url_posiblesCursantes = 'http://localhost:8080/gcu/planes/1/materias/probables-cursantes'
+
+    $http({method: 'GET',
+        url: url_posiblesCursantes + '?access_token=' + $window.sessionStorage.token
+    }).success(function(data){
+        $scope.posiblesCursantes = data;
+    });
+
+});
+
+App.controller('PlanificacionParController', function($scope, $http, $window){
+
+    var url_planificacion_cuatri_par = 'http://localhost:8080/gcu/planificacion/par'
+
+    $http({method: 'GET',
+        url: url_planificacion_cuatri_par + '?access_token=' + $window.sessionStorage.token
+    }).success(function(data){
+        $scope.scoresPares = data.scores;
+        $scope.scoreUnificadoPar = data.score;
+        $scope.scoreSegundoCuatri = data.scoreSegundoCuatri;
+        $scope.scoreCuartoCuatri = data.scoreCuartoCuatri;
+        $scope.scoreSextoCuatri = data.scoreSextoCuatri;
+        $scope.scoreOctavoCuatri = data.scoreOctavoCuatri;
+        $scope.scoreDecimoCuatri = data.scoreDecimoCuatri;
+        $scope.planificacionSegundoCuatri = data.nivelesSegundoCuatri;
+        $scope.planificacionCuartoCuatri = data.nivelesCuartoCuatri;
+        $scope.planificacionSextoCuatri = data.nivelesSextoCuatri;
+        $scope.planificacionOctavoCuatri = data.nivelesOctavoCuatri;
+        $scope.planificacionDecimoCuatri = data.nivelesDecimoCuatri;
+    });
+
+});
+
+App.controller('PlanificacionImparController', function($scope, $http, $window){
+
+    var url_planificacion_cuatri_impar = 'http://localhost:8080/gcu/planificacion/impar'
+
+    $http({method: 'GET',
+        url: url_planificacion_cuatri_impar + '?access_token=' + $window.sessionStorage.token
+    }).success(function(data){
+        $scope.scoresImpares = data.scores;
+        $scope.scoreUnificadoImpar = data.score;
+        $scope.scorePrimerCuatri = data.scorePrimerCuatri;
+        $scope.scoreTercerCuatri = data.scoreTercerCuatri;
+        $scope.scoreQuintoCuatri = data.scoreQuintoCuatri;
+        $scope.scoreSeptimoCuatri = data.scoreSeptimoCuatri;
+        $scope.scoreNovenoCuatri = data.scoreNovenoCuatri;
+        $scope.planificacionPrimerCuatri = data.nivelesPrimerCuatri;
+        $scope.planificacionTercerCuatri = data.nivelesTercerCuatri;
+        $scope.planificacionQuintoCuatri = data.nivelesQuintoCuatri;
+        $scope.planificacionSeptimoCuatri = data.nivelesSeptimoCuatri;
+        $scope.planificacionNovenoCuatri = data.nivelesNovenoCuatri;
+    });
+
+});
