@@ -16,7 +16,7 @@ myApp.directive('fileModel', ['$parse', function ($parse) {
     };
 }]);
 
-myApp.service('fileUpload', ['$http', function ($http) {
+myApp.service('fileUpload', ['$http', '$window', function ($http, $window) {
     this.uploadFileToUrl = function(file, uploadUrl){
         var fd = new FormData();
         fd.append('file', file);
@@ -25,8 +25,10 @@ myApp.service('fileUpload', ['$http', function ($http) {
             headers: {'Content-Type': undefined}
         })
         .success(function(){
+            $window.alert('El archivo se proceso correctamente.');
         })
         .error(function(){
+            $window.alert('Hubo un error al procesar el archivo, verifique su estructura.');
         });
     }
 }]);
