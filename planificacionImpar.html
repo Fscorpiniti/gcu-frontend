@@ -14,7 +14,7 @@
     <script src="js/controllersGcu.js"></script>
 </head>
 
-<body ng-controller="PlanificacionImparController">
+<body ng-controller="PlanificacionImparController as controlador">
 <!--Start Header-->
 <div id="screensaver">
     <canvas id="canvas"></canvas>
@@ -115,8 +115,35 @@
     <div class="no-move"></div>
 </div>
 <div id="divImpar" class="box-content">
+    <button type="button" ng-click="controlador.refresh();">Limpiar planificacion</button>
+    <br>
+    <br>
+    <label>Cambiar planificacion </label>
+    <br>
+    <br>
+    <form ng-submit="controlador.change();" >
+        <label>Codigo de materia: </label>
+        <input type="search" ng-model="controlador.fdatos.idMateria" placeholder="Codigo de materia" required>
+        <br>
+        <br>
+        <label>Numero de nuevo dia: </label>
+        <input type="search" class="input-block-level" ng-model="controlador.fdatos.nuevoDia" placeholder="Numero de nuevo dia" required>
+        <br>
+        <br>
+        <label>Ingrese el numero de dia correspondiente: Lunes: 2, Martes:3, Miercoles: 4, Jueves: 5, Viernes: 6, Sabado: 7</label>
+        <label>Si la materia es de 2 dias, separelos por "," .</label>
+        <br>
+        <br>
+        <input class="btn btn-large btn-info" type="submit" value="Cambiar de dia">
+    </form>
+    <br>
+    <br>
     <label>Score cuatrimestres impares : </label>
     <label>{{scoreUnificadoImpar}}</label>
+    <br>
+    <br>
+    <label>Fecha ultima actualizacion :</label>
+    <label>{{fechaActualizacion}}</label>
     <br>
     <br>
     <table class="table">
@@ -130,7 +157,7 @@
         <tbody>
 
         <tr ng-repeat="unScore in scoresImpares">
-            <td>{{unScore.cantidad_materias}}</td>
+            <td>{{unScore.cantidadMaterias}}</td>
             <td>{{unScore.alumnos.length}}</td>
         </tr>
         </tbody>
@@ -157,14 +184,13 @@
 
         <tbody>
 
-
         <tr ng-repeat="primerCuatri in planificacionPrimerCuatri">
-            <td>{{primerCuatri.lunes.materia.materia.nombre}}</td>
-            <td>{{primerCuatri.martes.materia.materia.nombre}}</td>
-            <td>{{primerCuatri.miercoles.materia.materia.nombre}}</td>
-            <td>{{primerCuatri.jueves.materia.materia.nombre}}</td>
-            <td>{{primerCuatri.viernes.materia.materia.nombre}}</td>
-            <td>{{primerCuatri.sabado.materia.materia.nombre}}</td>
+            <td>{{primerCuatri.lunes.materia.materia.codigo + '  ' + primerCuatri.lunes.materia.materia.nombre}}</td>
+            <td>{{primerCuatri.martes.materia.materia.codigo + '  ' + primerCuatri.martes.materia.materia.nombre}}</td>
+            <td>{{primerCuatri.miercoles.materia.materia.codigo + '  ' + primerCuatri.miercoles.materia.materia.nombre}}</td>
+            <td>{{primerCuatri.jueves.materia.materia.codigo + '  ' + primerCuatri.jueves.materia.materia.nombre}}</td>
+            <td>{{primerCuatri.viernes.materia.materia.codigo + '  ' + primerCuatri.viernes.materia.materia.nombre}}</td>
+            <td>{{primerCuatri.sabado.materia.materia.codigo + '  ' + primerCuatri.sabado.materia.materia.nombre}}</td>
         </tr>
         </tbody>
     </table>
@@ -191,12 +217,12 @@
         <tbody>
 
         <tr ng-repeat="tercerCuatri in planificacionTercerCuatri">
-            <td>{{tercerCuatri.lunes.materia.materia.nombre}}</td>
-            <td>{{tercerCuatri.martes.materia.materia.nombre}}</td>
-            <td>{{tercerCuatri.miercoles.materia.materia.nombre}}</td>
-            <td>{{tercerCuatri.jueves.materia.materia.nombre}}</td>
-            <td>{{tercerCuatri.viernes.materia.materia.nombre}}</td>
-            <td>{{tercerCuatri.sabado.materia.materia.nombre}}</td>
+            <td>{{tercerCuatri.lunes.materia.materia.codigo + '  ' +tercerCuatri.lunes.materia.materia.nombre}}</td>
+            <td>{{tercerCuatri.martes.materia.materia.codigo + '  ' +tercerCuatri.martes.materia.materia.nombre}}</td>
+            <td>{{tercerCuatri.miercoles.materia.materia.codigo + '  ' +tercerCuatri.miercoles.materia.materia.nombre}}</td>
+            <td>{{tercerCuatri.jueves.materia.materia.codigo + '  ' +tercerCuatri.jueves.materia.materia.nombre}}</td>
+            <td>{{tercerCuatri.viernes.materia.materia.codigo + '  ' +tercerCuatri.viernes.materia.materia.nombre}}</td>
+            <td>{{tercerCuatri.sabado.materia.materia.codigo + '  ' +tercerCuatri.sabado.materia.materia.nombre}}</td>
         </tr>
 
         </tr>
@@ -226,12 +252,12 @@
         <tbody>
 
         <tr ng-repeat="quintoCuatri in planificacionQuintoCuatri">
-            <td>{{quintoCuatri.lunes.materia.materia.nombre}}</td>
-            <td>{{quintoCuatri.martes.materia.materia.nombre}}</td>
-            <td>{{quintoCuatri.miercoles.materia.materia.nombre}}</td>
-            <td>{{quintoCuatri.jueves.materia.materia.nombre}}</td>
-            <td>{{quintoCuatri.viernes.materia.materia.nombre}}</td>
-            <td>{{quintoCuatri.sabado.materia.materia.nombre}}</td>
+            <td>{{quintoCuatri.lunes.materia.materia.codigo + '  ' + quintoCuatri.lunes.materia.materia.nombre}}</td>
+            <td>{{quintoCuatri.martes.materia.materia.codigo + '  ' + quintoCuatri.martes.materia.materia.nombre}}</td>
+            <td>{{quintoCuatri.miercoles.materia.materia.codigo + '  ' + quintoCuatri.miercoles.materia.materia.nombre}}</td>
+            <td>{{quintoCuatri.jueves.materia.materia.codigo + '  ' + quintoCuatri.jueves.materia.materia.nombre}}</td>
+            <td>{{quintoCuatri.viernes.materia.materia.codigo + '  ' + quintoCuatri.viernes.materia.materia.nombre}}</td>
+            <td>{{quintoCuatri.sabado.materia.materia.codigo + '  ' + quintoCuatri.sabado.materia.materia.nombre}}</td>
         </tr>
 
         </tr>
@@ -261,12 +287,12 @@
         <tbody>
 
         <tr ng-repeat="septimoCuatri in planificacionSeptimoCuatri">
-            <td>{{septimoCuatri.lunes.materia.materia.nombre}}</td>
-            <td>{{septimoCuatri.martes.materia.materia.nombre}}</td>
-            <td>{{septimoCuatri.miercoles.materia.materia.nombre}}</td>
-            <td>{{septimoCuatri.jueves.materia.materia.nombre}}</td>
-            <td>{{septimoCuatri.viernes.materia.materia.nombre}}</td>
-            <td>{{septimoCuatri.sabado.materia.materia.nombre}}</td>
+            <td>{{septimoCuatri.lunes.materia.materia.codigo + '  ' + septimoCuatri.lunes.materia.materia.nombre}}</td>
+            <td>{{septimoCuatri.martes.materia.materia.codigo + '  ' + septimoCuatri.martes.materia.materia.nombre}}</td>
+            <td>{{septimoCuatri.miercoles.materia.materia.codigo + '  ' + septimoCuatri.miercoles.materia.materia.nombre}}</td>
+            <td>{{septimoCuatri.jueves.materia.materia.codigo + '  ' + septimoCuatri.jueves.materia.materia.nombre}}</td>
+            <td>{{septimoCuatri.viernes.materia.materia.codigo + '  ' + septimoCuatri.viernes.materia.materia.nombre}}</td>
+            <td>{{septimoCuatri.sabado.materia.materia.codigo + '  ' + septimoCuatri.sabado.materia.materia.nombre}}</td>
         </tr>
 
         </tr>
@@ -296,12 +322,12 @@
         <tbody>
 
         <tr ng-repeat="novenoCuatri in planificacionNovenoCuatri">
-            <td>{{novenoCuatri.lunes.materia.materia.nombre}}</td>
-            <td>{{novenoCuatri.martes.materia.materia.nombre}}</td>
-            <td>{{novenoCuatri.miercoles.materia.materia.nombre}}</td>
-            <td>{{novenoCuatri.jueves.materia.materia.nombre}}</td>
-            <td>{{novenoCuatri.viernes.materia.materia.nombre}}</td>
-            <td>{{novenoCuatri.sabado.materia.materia.nombre}}</td>
+            <td>{{novenoCuatri.lunes.materia.materia.codigo + '  ' + novenoCuatri.lunes.materia.materia.nombre}}</td>
+            <td>{{novenoCuatri.martes.materia.materia.codigo + '  ' + novenoCuatri.martes.materia.materia.nombre}}</td>
+            <td>{{novenoCuatri.miercoles.materia.materia.codigo + '  ' + novenoCuatri.miercoles.materia.materia.nombre}}</td>
+            <td>{{novenoCuatri.jueves.materia.materia.codigo + '  ' + novenoCuatri.jueves.materia.materia.nombre}}</td>
+            <td>{{novenoCuatri.viernes.materia.materia.codigo + '  ' + novenoCuatri.viernes.materia.materia.nombre}}</td>
+            <td>{{novenoCuatri.sabado.materia.materia.codigo + '  ' + novenoCuatri.sabado.materia.materia.nombre}}</td>
         </tr>
 
         </tr>

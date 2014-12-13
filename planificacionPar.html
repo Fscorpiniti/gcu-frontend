@@ -14,7 +14,7 @@
     <script src="js/controllersGcu.js"></script>
 </head>
 
-<body ng-controller="PlanificacionParController">
+<body ng-controller="PlanificacionParController as controlador">
 <!--Start Header-->
 <div id="screensaver">
     <canvas id="canvas"></canvas>
@@ -115,8 +115,35 @@
                                 <div class="no-move"></div>
                             </div>
                             <div id="divPar" class="box-content">
+                                <button type="button" ng-click="controlador.refresh();">Limpiar planificacion</button>
+                                <br>
+                                <br>
+                                <label>Cambiar planificacion </label>
+                                <br>
+                                <br>
+                                <form ng-submit="controlador.change();" >
+                                    <label>Codigo de materia: </label>
+                                    <input type="search" ng-model="controlador.fdatos.idMateria" placeholder="Codigo de materia" required>
+                                    <br>
+                                    <br>
+                                    <label>Numero de nuevo dia: </label>
+                                    <input type="search" class="input-block-level" ng-model="controlador.fdatos.nuevoDia" placeholder="Numero de nuevo dia" required>
+                                    <br>
+                                    <br>
+                                    <label>Ingrese el numero de dia correspondiente: Lunes: 2, Martes:3, Miercoles: 4, Jueves: 5, Viernes: 6, Sabado: 7.</label>
+                                    <label>Si la materia es de 2 dias, separelos por "," .</label>
+                                    <br>
+                                    <br>
+                                    <input class="btn btn-large btn-info" type="submit" value="Cambiar de dia">
+                                </form>
+                                <br>
+                                <br>
                                 <label>Score cuatrimestres pares :</label>
                                 <label>{{scoreUnificadoPar}}</label>
+                                <br>
+                                <br>
+                                <label>Fecha ultima actualizacion :</label>
+                                <label>{{fechaActualizacion}}</label>
                                 <br>
                                 <br>
                                 <table class="table">
@@ -130,7 +157,7 @@
                                     <tbody>
                                     
                                     <tr ng-repeat="unScore in scoresPares">
-                                        <td>{{unScore.cantidad_materias}}</td>
+                                        <td>{{unScore.cantidadMaterias}}</td>
                                         <td>{{unScore.alumnos.length}}</td>
                                     </tr>
                                     </tbody>
@@ -158,12 +185,12 @@
                                     <tbody>
 
                                     <tr ng-repeat="cuatri in planificacionSegundoCuatri">
-                                        <td>{{cuatri.lunes.materia.materia.nombre}}</td>
-                                        <td>{{cuatri.martes.materia.materia.nombre}}</td>
-                                        <td>{{cuatri.miercoles.materia.materia.nombre}}</td>
-                                        <td>{{cuatri.jueves.materia.materia.nombre}}</td>
-                                        <td>{{cuatri.viernes.materia.materia.nombre}}</td>
-                                        <td>{{cuatri.sabado.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.lunes.materia.materia.codigo + '  ' +  cuatri.lunes.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.martes.materia.materia.codigo + '  ' +  cuatri.martes.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.miercoles.materia.materia.codigo + '  ' +  cuatri.miercoles.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.jueves.materia.materia.codigo + '  ' +  cuatri.jueves.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.viernes.materia.materia.codigo + '  ' +  cuatri.viernes.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.sabado.materia.materia.codigo + '  ' +  cuatri.sabado.materia.materia.nombre}}</td>
                                     </tr>
 
                                     </tr>
@@ -192,12 +219,12 @@
                                     <tbody>
 
                                     <tr ng-repeat="cuatri in planificacionCuartoCuatri">
-                                        <td>{{cuatri.lunes.materia.materia.nombre}}</td>
-                                        <td>{{cuatri.martes.materia.materia.nombre}}</td>
-                                        <td>{{cuatri.miercoles.materia.materia.nombre}}</td>
-                                        <td>{{cuatri.jueves.materia.materia.nombre}}</td>
-                                        <td>{{cuatri.viernes.materia.materia.nombre}}</td>
-                                        <td>{{cuatri.sabado.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.lunes.materia.materia.codigo + '  ' +  cuatri.lunes.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.martes.materia.materia.codigo + '  ' +  cuatri.martes.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.miercoles.materia.materia.codigo + '  ' +  cuatri.miercoles.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.jueves.materia.materia.codigo + '  ' +  cuatri.jueves.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.viernes.materia.materia.codigo + '  ' +  cuatri.viernes.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.sabado.materia.materia.codigo + '  ' +  cuatri.sabado.materia.materia.nombre}}</td>
                                     </tr>
 
                                     </tr>
@@ -227,12 +254,12 @@
                                     <tbody>
 
                                     <tr ng-repeat="cuatri in planificacionSextoCuatri">
-                                        <td>{{cuatri.lunes.materia.materia.nombre}}</td>
-                                        <td>{{cuatri.martes.materia.materia.nombre}}</td>
-                                        <td>{{cuatri.miercoles.materia.materia.nombre}}</td>
-                                        <td>{{cuatri.jueves.materia.materia.nombre}}</td>
-                                        <td>{{cuatri.viernes.materia.materia.nombre}}</td>
-                                        <td>{{cuatri.sabado.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.lunes.materia.materia.codigo + '  ' +  cuatri.lunes.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.martes.materia.materia.codigo + '  ' +  cuatri.martes.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.miercoles.materia.materia.codigo + '  ' +  cuatri.miercoles.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.jueves.materia.materia.codigo + '  ' +  cuatri.jueves.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.viernes.materia.materia.codigo + '  ' +  cuatri.viernes.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.sabado.materia.materia.codigo + '  ' +  cuatri.sabado.materia.materia.nombre}}</td>
                                     </tr>
 
                                     </tr>
@@ -262,12 +289,12 @@
                                     <tbody>
 
                                     <tr ng-repeat="cuatri in planificacionOctavoCuatri">
-                                        <td>{{cuatri.lunes.materia.materia.nombre}}</td>
-                                        <td>{{cuatri.martes.materia.materia.nombre}}</td>
-                                        <td>{{cuatri.miercoles.materia.materia.nombre}}</td>
-                                        <td>{{cuatri.jueves.materia.materia.nombre}}</td>
-                                        <td>{{cuatri.viernes.materia.materia.nombre}}</td>
-                                        <td>{{cuatri.sabado.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.lunes.materia.materia.codigo + '  ' +  cuatri.lunes.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.martes.materia.materia.codigo + '  ' +  cuatri.martes.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.miercoles.materia.materia.codigo + '  ' +  cuatri.miercoles.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.jueves.materia.materia.codigo + '  ' +  cuatri.jueves.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.viernes.materia.materia.codigo + '  ' +  cuatri.viernes.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.sabado.materia.materia.codigo + '  ' +  cuatri.sabado.materia.materia.nombre}}</td>
                                     </tr>
 
                                     </tr>
@@ -297,12 +324,12 @@
                                     <tbody>
 
                                     <tr ng-repeat="cuatri in planificacionDecimoCuatri">
-                                        <td>{{cuatri.lunes.materia.materia.nombre}}</td>
-                                        <td>{{cuatri.martes.materia.materia.nombre}}</td>
-                                        <td>{{cuatri.miercoles.materia.materia.nombre}}</td>
-                                        <td>{{cuatri.jueves.materia.materia.nombre}}</td>
-                                        <td>{{cuatri.viernes.materia.materia.nombre}}</td>
-                                        <td>{{cuatri.sabado.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.lunes.materia.materia.codigo + '  ' + cuatri.lunes.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.martes.materia.materia.codigo + '  ' + cuatri.martes.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.miercoles.materia.materia.codigo + '  ' + cuatri.miercoles.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.jueves.materia.materia.codigo + '  ' + cuatri.jueves.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.viernes.materia.materia.codigo + '  ' + cuatri.viernes.materia.materia.nombre}}</td>
+                                        <td>{{cuatri.sabado.materia.materia.codigo + '  ' + cuatri.sabado.materia.materia.nombre}}</td>
                                     </tr>
 
                                     </tr>
