@@ -2,7 +2,7 @@ var App = angular.module('Listado_Materias', []);
 
 App.controller('PlanEstudioController', function($scope, $http, $window){
         
-   var url_carreras  = 'http://localhost:8080/gcu/carreras/1/planes';
+   var url_carreras  = 'http://gcu-api.herokuapp.com:80/carreras/1/planes';
 
    $http({method: 'GET',
          url: url_carreras + '?access_token=' + $window.sessionStorage.token
@@ -14,7 +14,7 @@ App.controller('PlanEstudioController', function($scope, $http, $window){
 
 App.controller('MateriasController', function($scope, $http, $window){
 
-    var url_posiblesCursantes = 'http://localhost:8080/gcu/planes/1/materias/probables-cursantes'
+    var url_posiblesCursantes = 'http://gcu-api.herokuapp.com:80/planes/1/materias/probables-cursantes'
 
     $http({method: 'GET',
         url: url_posiblesCursantes + '?access_token=' + $window.sessionStorage.token
@@ -26,9 +26,9 @@ App.controller('MateriasController', function($scope, $http, $window){
 
 App.controller('PlanificacionParController', function($scope, $http, $window){
 
-    var url_planificacion_cuatri_par = 'http://localhost:8080/gcu/planificacion/par'
-    var url_planificacion_cuatri_par_refresh = 'http://localhost:8080/gcu/planificacion/par/refresh'
-    var url_planificacion_cuatri_par_change = 'http://localhost:8080/gcu/planificacion/par/change'
+    var url_planificacion_cuatri_par = 'http://gcu-api.herokuapp.com:80/planificacion/par'
+    var url_planificacion_cuatri_par_refresh = 'http://gcu-api.herokuapp.com:80/planificacion/par/refresh'
+    var url_planificacion_cuatri_par_change = 'http://gcu-api.herokuapp.com:80/planificacion/par/change'
 
     var controlador=this;
     controlador.fdatos = {};
@@ -94,9 +94,9 @@ App.controller('PlanificacionParController', function($scope, $http, $window){
 
 App.controller('PlanificacionImparController', function($scope, $http, $window){
 
-    var url_planificacion_cuatri_impar = 'http://localhost:8080/gcu/planificacion/impar'
-    var url_planificacion_cuatri_impar_refresh = 'http://localhost:8080/gcu/planificacion/impar/refresh'
-    var url_planificacion_cuatri_impar_change = 'http://localhost:8080/gcu/planificacion/impar/change'
+    var url_planificacion_cuatri_impar = 'http://gcu-api.herokuapp.com:80/planificacion/impar'
+    var url_planificacion_cuatri_impar_refresh = 'http://gcu-api.herokuapp.com:80/planificacion/impar/refresh'
+    var url_planificacion_cuatri_impar_change = 'http://gcu-api.herokuapp.com:80/planificacion/impar/change'
 
     var controlador=this;
     controlador.fdatos = {};

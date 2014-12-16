@@ -4,7 +4,7 @@ function controladorPrincipal($http, $window){
     var userLogin=this;
     userLogin.fdatos = {};
 
-    var url_login = 'http://localhost:8080/gcu/login'
+    var url_login = 'http://gcu-api.herokuapp.com:80/login'
 
     userLogin.enviar = function(){
       $http.post(url_login, userLogin.fdatos).success(function(res){
